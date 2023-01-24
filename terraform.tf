@@ -10,6 +10,8 @@ terraform {
     }
   }
 
+  # see https://developer.hashicorp.com/terraform/language/settings#specifying-provider-requirements
+  required_providers {
     # see https://registry.terraform.io/providers/hashicorp/aws/4.51.0/
     aws = {
       source  = "hashicorp/aws"

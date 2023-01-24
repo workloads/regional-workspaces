@@ -7,11 +7,16 @@
 <!-- TOC -->
 * [Terraform Cloud Workspace: `regional-workspaces`](#terraform-cloud-workspace--regional-workspaces)
   * [Table of Contents](#table-of-contents)
+  * [Requirements](#requirements)
+  * [Usage](#usage)
     * [Inputs](#inputs)
     * [Outputs](#outputs)
   * [Author Information](#author-information)
   * [License](#license)
 <!-- TOC -->
+
+## Requirements
+
 ## Usage
 
 <!-- BEGIN_TF_DOCS -->
@@ -27,7 +32,6 @@
 
 ### Outputs
 
-No outputs.
 | Name | Description |
 |------|-------------|
 | aws_regions | Exported Values of `data.aws_regions.main`. |
