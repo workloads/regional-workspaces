@@ -28,7 +28,7 @@
 | terraform_version | Version of Terraform to use for Terraform Cloud. | `string` | yes |
 | tfe_oauth_client_id | VCS Provider OAuth Client Identifier. | `string` | yes |
 | tfe_organization | Name of the Terraform Cloud Organization. | `string` | yes |
-| provider_prefixes | Provider-specific Prefix for Terraform Cloud Workspace (Including trailing dash). | <pre>object({<br>    aws          = string<br>    gcp          = string<br>    azure        = string<br>    digitalocean = string<br>  })</pre> | no |
+| provider_prefixes | Provider-specific Prefix for Terraform Cloud Workspace. | <pre>object({<br>    aws          = string<br>    gcp          = string<br>    azure        = string<br>    digitalocean = string<br>  })</pre> | no |
 
 ### Outputs
 
