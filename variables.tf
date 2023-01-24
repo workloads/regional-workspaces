@@ -11,7 +11,7 @@ variable "provider_prefixes" {
     digitalocean = string
   })
 
-  description = "Provider-specific Prefix for Terraform Cloud Workspace (Including trailing dash)."
+  description = "Provider-specific Prefix for Terraform Cloud Workspace."
 
   default = {
     aws          = "aws"
