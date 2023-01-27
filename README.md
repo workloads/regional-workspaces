@@ -17,6 +17,8 @@
 
 ## Requirements
 
+* Terraform `1.3.0` or [newer](https://developer.hashicorp.com/terraform/downloads).
+
 ## Usage
 
 <!-- BEGIN_TF_DOCS -->
@@ -24,11 +26,11 @@
 
 | Name | Description | Type | Required |
 |------|-------------|------|:--------:|
+| csp_configuration | Project-wide List of Cloud Service Providers (CSPs). | <pre>list(object({<br>    name    = string<br>    prefix  = string<br>    enabled = bool<br>  }))</pre> | yes |
 | management_region_aws | AWS-specific `Management` Region Identifier. | `string` | yes |
 | terraform_version | Version of Terraform to use for Terraform Cloud. | `string` | yes |
 | tfe_oauth_client_id | VCS Provider OAuth Client Identifier. | `string` | yes |
 | tfe_organization | Name of the Terraform Cloud Organization. | `string` | yes |
-| provider_prefixes | Provider-specific Prefix for Terraform Cloud Workspace. | <pre>object({<br>    aws          = string<br>    gcp          = string<br>    azure        = string<br>    digitalocean = string<br>  })</pre> | no |
 
 ### Outputs
 

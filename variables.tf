@@ -3,22 +3,16 @@ variable "management_region_aws" {
   description = "AWS-specific `Management` Region Identifier."
 }
 
-variable "provider_prefixes" {
-  type = object({
-    aws          = string
-    gcp          = string
-    azure        = string
-    digitalocean = string
-  })
+variable "csp_configuration" {
+  type = list(object({
+    name    = string
+    prefix  = string
+    enabled = bool
+  }))
 
-  description = "Provider-specific Prefix for Terraform Cloud Workspace."
+  description = "Project-wide List of Cloud Service Providers (CSPs)."
 
-  default = {
-    aws          = "aws"
-    gcp          = "gcp"
-    azure        = "az"
-    digitalocean = "do"
-  }
+  # the default for this variable is set in `workloads/workspaces`
 }
 
 variable "terraform_version" {
