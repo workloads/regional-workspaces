@@ -17,6 +17,7 @@
 
 ## Requirements
 
+* Terraform Cloud [Account](https://app.terraform.io/session)
 * Terraform `1.3.0` or [newer](https://developer.hashicorp.com/terraform/downloads).
 
 ## Usage
