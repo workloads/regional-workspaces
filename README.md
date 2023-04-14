@@ -1,11 +1,11 @@
-# Terraform Cloud Workspace: `regional-workspaces`
+# Terraform Cloud Workspace `regional-workspaces`
 
 > This directory manages the lifecycle of Regional (and provider-specific) Terraform Cloud Workspaces.
 
 ## Table of Contents
 
 <!-- TOC -->
-* [Terraform Cloud Workspace: `regional-workspaces`](#terraform-cloud-workspace--regional-workspaces)
+* [Terraform Cloud Workspace `regional-workspaces`](#terraform-cloud-workspace-regional-workspaces)
   * [Table of Contents](#table-of-contents)
   * [Requirements](#requirements)
   * [Usage](#usage)
@@ -21,6 +21,8 @@
 * Terraform `1.3.0` or [newer](https://developer.hashicorp.com/terraform/downloads).
 
 ## Usage
+
+TODO
 
 <!-- BEGIN_TF_DOCS -->
 ### Inputs
