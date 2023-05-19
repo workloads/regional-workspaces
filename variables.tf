@@ -1,8 +1,3 @@
-variable "management_region_aws" {
-  type        = string
-  description = "AWS-specific `Management` Region Identifier."
-}
-
 variable "csp_configuration" {
   type = list(object({
     name    = string
@@ -13,6 +8,11 @@ variable "csp_configuration" {
   description = "Project-wide List of Cloud Service Providers (CSPs)."
 
   # the default for this variable is set in `workloads/workspaces`
+}
+
+variable "management_region_aws" {
+  type        = string
+  description = "AWS-specific `Management` Region Identifier."
 }
 
 variable "terraform_version" {
