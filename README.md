@@ -1,6 +1,6 @@
 # Terraform Cloud Workspace `regional-workspaces`
 
-> This directory manages the lifecycle of Regional (and provider-specific) Terraform Cloud Workspaces.
+> This directory manages Regional (and provider-specific) Terraform Cloud Workspaces  for [@workloads](https://github.com/workloads).
 
 ## Table of Contents
 
