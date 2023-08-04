@@ -41,7 +41,7 @@ For more information, including detailed usage guidelines, see the [Terraform do
 
 | Name | Description |
 |------|-------------|
-| aws_regions | Exported Values of `data.aws_regions.main`. |
+| csp_configuration | Exported value of `local.csp_configuration`. |
 <!-- END_TF_DOCS -->
 
 ## Author Information

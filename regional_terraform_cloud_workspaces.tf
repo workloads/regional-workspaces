@@ -8,11 +8,11 @@ module "regional_aws_workspaces" {
   region = {
     category   = "env"
     identifier = each.key
-    prefix     = var.provider_prefixes.aws
+    prefix     = local.csp_configuration["aws"].prefix
     variable   = "AWS_REGION"
   }
 
-  project_id        = tfe_project.regional_workspaces.id
+  project_id        = tfe_project.regional_workspaces["aws"].id
   terraform_version = var.terraform_version
   tfe_organization  = var.tfe_organization
 

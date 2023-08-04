@@ -30,3 +30,16 @@ variable "tfe_organization" {
   type        = string
   description = "Name of the Terraform Cloud Organization."
 }
+
+locals {
+  csp_configuration_full = var.csp_configuration
+
+  # selective CSP Configuration, only contains `enabled` providers
+  # assigning `value` as the full value of each object results in duplication of `value.prefix` in the output
+  # but it allows for easier consumption of the `value.prefix` because it foregoes approaches such as `keys()`
+  csp_configuration = tomap({
+    for value in local.csp_configuration_full :
+    value.prefix => value
+    if value.enabled == true
+  })
+}
