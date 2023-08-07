@@ -20,6 +20,12 @@ terraform {
       version = ">= 5.11.0, < 6.0.0"
     }
 
+    # see https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = ">= 3.68.0, < 4.0.0"
+    }
+
     # see https://registry.terraform.io/providers/hashicorp/google/4.76.0/
     google = {
       source  = "hashicorp/google"

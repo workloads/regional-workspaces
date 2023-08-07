@@ -1,6 +1,6 @@
 # Terraform Cloud Workspace `regional-workspaces`
 
-> This directory manages Regional (and provider-specific) Terraform Cloud Workspaces  for [@workloads](https://github.com/workloads).
+> This directory manages Regional (and provider-specific) Terraform Cloud Workspaces for [@workloads](https://github.com/workloads).
 
 ## Table of Contents
 
@@ -11,6 +11,8 @@
   * [Usage](#usage)
     * [Inputs](#inputs)
     * [Outputs](#outputs)
+  * [Notes](#notes)
+    * [Updating Azure Regions File](#updating-azure-regions-file)
   * [Author Information](#author-information)
   * [License](#license)
 <!-- TOC -->
@@ -22,9 +24,28 @@
 
 ## Usage
 
+The `regional-workspaces` Terraform Cloud Workspace acts as a bootstrapper for CSP-specific and regional Terraform Cloud Workspaces.
+
 This repository uses a standard Terraform workflow (`init`, `plan`, `apply`).
 
 For more information, including detailed usage guidelines, see the [Terraform documentation](https://developer.hashicorp.com/terraform/cli/commands).
+
+Additional workflows are available through a [Makefile](./Makefile).
+
+Running `make` without commands will print out the following help information:
+
+```text
+🌐 REGIONAL TERRAFORM CLOUD WORKSPACES
+
+Target                        Description                                                  Usage
+get-az-subscription           get Azure Subscription to currently logged-in Account        `make get-az-subscription`
+set-az-subscription           set Azure CLI Subscription to currently logged-in Account    `make set-az-subscription`
+create-az-service-principal   create Azure Service Principal                               `make create-az-service-principal`
+list-az-locations             retrieve and format a list of available Azure Locations      `make list-az-locations`
+help                          display a list of Make Targets                               `make help`
+_listincludes                 list all included Makefiles and *.mk files                   `make _listincludes`
+_selfcheck                    lint Makefile                                                `make _selfcheck`
+```
 
 <!-- BEGIN_TF_DOCS -->
 ### Inputs
@@ -44,9 +65,21 @@ For more information, including detailed usage guidelines, see the [Terraform do
 
 | Name | Description |
 |------|-------------|
+| aws_workspace_urls | AWS-specific Regional Workspace URLs. |
+| azure_workspace_urls | Azure-specific Regional Workspace URLs. |
 | csp_configuration | Exported value of `local.csp_configuration`. |
-| google_regions | Exported Values of `data.google_compute_regions.main`. |
+| google_workspace_urls | Google Cloud-specific Regional Workspace URLs. |
 <!-- END_TF_DOCS -->
+
+## Notes
+
+### Updating Azure Regions File
+
+The Azure Regions file ([`./variables_azure_locations.json`](./variables_azure_locations.json)) can be updated by executing the `list-az-locations` target while setting the `update_files` flag to `true`:
+
+```shell
+make list-az-locations update_files=true
+```
 
 ## Author Information
 

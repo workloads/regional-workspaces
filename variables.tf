@@ -47,6 +47,10 @@ variable "tfe_organization" {
 }
 
 locals {
+  # load list of Azure Locations from get all currently enabled Azure Locations
+  # see https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/extended_locations
+  azure_locations = jsondecode(file("./variables_azure_locations.json"))
+
   csp_configuration_full = var.csp_configuration
 
   # selective CSP Configuration, only contains `enabled` providers
