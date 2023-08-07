@@ -12,17 +12,23 @@ output "aws_workspace_urls" {
   description = "AWS-specific Regional Workspace URLs."
 
   # iterate over Workspace Outputs
-  value = {
-    for workspace in module.regional_aws_workspaces : workspace.tfe_workspace.name => workspace.tfe_workspace.html_url
-  }
+  value = [
+    for region, workspace in module.regional_aws_workspaces : workspace.tfe_workspace.html_url
+  ]
 }
 
-#
-#  # iterate over Workspace Outputs
-#  value = {
-#    for workspace in module.regional_aws_workspaces.regional_workspace_urls : workspace.id => workspace.name
-#  }
+#output "azure_locations" {
+#  description = "Exported Values of JSON-encoded `./variables_azure_locations.json`."
+#  value       = local.azure_locations
 #}
+
+output "azure_workspace_urls" {
+  description = "Azure-specific Regional Workspace URLs."
+
+  value = [
+    for region, workspace in module.regional_azure_workspaces : workspace.tfe_workspace.html_url
+  ]
+}
 
 #output "google_regions" {
 #  description = "Exported Values of `data.google_compute_regions.main`."
@@ -32,8 +38,7 @@ output "aws_workspace_urls" {
 output "google_workspace_urls" {
   description = "Google Cloud-specific Regional Workspace URLs."
 
-  # iterate over Workspace Outputs
-  value = {
-    for workspace in module.regional_google_workspaces : workspace.tfe_workspace.name => workspace.tfe_workspace.html_url
-  }
+  value = [
+    for region, workspace in module.regional_google_workspaces : workspace.tfe_workspace.html_url
+  ]
 }
