@@ -18,7 +18,7 @@
 ## Requirements
 
 * Terraform Cloud [Account](https://app.terraform.io/session)
-* Terraform `1.3.0` or [newer](https://developer.hashicorp.com/terraform/downloads).
+* Terraform `1.5.0` or [newer](https://developer.hashicorp.com/terraform/downloads).
 
 ## Usage
 
@@ -32,7 +32,10 @@ For more information, including detailed usage guidelines, see the [Terraform do
 | Name | Description | Type | Required |
 |------|-------------|------|:--------:|
 | csp_configuration | Project-wide List of Cloud Service Providers (CSPs). | <pre>list(object({<br>    name    = string<br>    prefix  = string<br>    enabled = bool<br>  }))</pre> | yes |
+| google_credentials | The credentials to use for authenticating with GCP. | `string` | yes |
+| google_project_id | The Project ID to use for authenticating with GCP. | `string` | yes |
 | management_region_aws | AWS-specific `Management` Region Identifier. | `string` | yes |
+| management_region_google | Google-specific `Management` Region Identifier. | `string` | yes |
 | terraform_version | Version of Terraform to use for Terraform Cloud. | `string` | yes |
 | tfe_oauth_client_id | VCS Provider OAuth Client Identifier. | `string` | yes |
 | tfe_organization | Name of the Terraform Cloud Organization. | `string` | yes |
@@ -42,6 +45,7 @@ For more information, including detailed usage guidelines, see the [Terraform do
 | Name | Description |
 |------|-------------|
 | csp_configuration | Exported value of `local.csp_configuration`. |
+| google_regions | Exported Values of `data.google_compute_regions.main`. |
 <!-- END_TF_DOCS -->
 
 ## Author Information

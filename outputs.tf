@@ -9,7 +9,7 @@ output "aws_regions" {
 }
 
 # TODO: rewrite loop
-#output "regional_workspace_urls" {
+#output "regional_aws_workspace_urls" {
 #  description = "Regional Workspace URLs."
 #
 #  # iterate over Workspace Outputs

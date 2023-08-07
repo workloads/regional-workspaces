@@ -10,9 +10,24 @@ variable "csp_configuration" {
   # the default for this variable is set in `workloads/workspaces`
 }
 
+variable "google_credentials" {
+  type        = string
+  description = "The credentials to use for authenticating with GCP."
+}
+
+variable "google_project_id" {
+  type        = string
+  description = "The Project ID to use for authenticating with GCP."
+}
+
 variable "management_region_aws" {
   type        = string
   description = "AWS-specific `Management` Region Identifier."
+}
+
+variable "management_region_google" {
+  type        = string
+  description = "Google-specific `Management` Region Identifier."
 }
 
 variable "terraform_version" {

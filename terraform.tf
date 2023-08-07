@@ -20,6 +20,12 @@ terraform {
       version = ">= 5.11.0, < 6.0.0"
     }
 
+    # see https://registry.terraform.io/providers/hashicorp/google/4.76.0/
+    google = {
+      source  = "hashicorp/google"
+      version = ">= 4.76.0, < 5.0.0"
+    }
+
     # see https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/
     tfe = {
       source  = "hashicorp/tfe"
