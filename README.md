@@ -8,6 +8,8 @@
 * [Terraform Cloud Workspace `regional-workspaces`](#terraform-cloud-workspace-regional-workspaces)
   * [Table of Contents](#table-of-contents)
   * [Requirements](#requirements)
+  * [Diagrams](#diagrams)
+    * [Terraform Cloud Workspace Structure](#terraform-cloud-workspace-structure)
   * [Usage](#usage)
     * [Inputs](#inputs)
     * [Outputs](#outputs)
@@ -21,6 +23,51 @@
 
 * Terraform Cloud [Account](https://app.terraform.io/session)
 * Terraform `1.5.0` or [newer](https://developer.hashicorp.com/terraform/downloads).
+
+## Diagrams
+
+This section contains an overview of (simplified) diagrams, describing the logical connections of the individual Terraform Cloud Workspaces.
+All diagrams are expressed in [Mermaid](https://mermaid.js.org) syntax.
+
+### Terraform Cloud Workspace Structure
+
+This diagram describes the [Terraform Cloud Workspaces](https://developer.hashicorp.com/terraform/cloud-docs/workspaces) structure:
+
+```mermaid
+flowchart TD
+  seed_workspace["Terraform Cloud Workspace `regional-workspaces`"]
+  seed_workspace --- csp_configuration["CSP Configuration Object"]
+
+  %% Cloud Service Providers
+  csp_configuration --- aws(("AWS"))
+  csp_configuration --- azure(("Azure"))
+  csp_configuration --- google(("GCP"))
+  csp_configuration --- others(("other CSPs"))
+
+  %% Regional Operations
+  workspace["per-region TFC Workspace"]
+
+  aws    --- workspace
+  azure  --- workspace
+  google --- workspace
+  others --- workspace
+
+  workspace --- nomad_agent["per-AZ Nomad Agent(s)"]
+
+  %% Styling
+  classDef workspace color: #ffffff, fill: #844FBA, stroke: #844FBA
+  class seed_workspace workspace;
+  class workspace workspace;
+
+  style csp_configuration color: #ffffff, stroke: #844FBA
+
+  style aws    color: #000000, fill: #ff9900, stroke: #ff9900
+  style azure  color: #ffffff, fill: #008ad7, stroke: #008ad7
+  style google color: #000000, fill: #db4437, stroke: #db4437
+  style others color: #ffffff, fill: #282433, stroke: #282433
+
+  style nomad_agent color: #000000, fill: #60dea9, stroke: #60dea9
+```
 
 ## Usage
 
