@@ -88,7 +88,7 @@ Target                        Description                                       
 get-az-subscription           get Azure Subscription to currently logged-in Account        `make get-az-subscription`
 set-az-subscription           set Azure CLI Subscription to currently logged-in Account    `make set-az-subscription`
 create-az-service-principal   create Azure Service Principal                               `make create-az-service-principal`
-list-az-locations             retrieve and format a list of available Azure Locations      `make list-az-locations`
+list-az-locations             retrieve and format a list of available Azure Locations      `make list-az-locations update_file=true`
 help                          display a list of Make Targets                               `make help`
 _listincludes                 list all included Makefiles and *.mk files                   `make _listincludes`
 _selfcheck                    lint Makefile                                                `make _selfcheck`
@@ -122,10 +122,10 @@ _selfcheck                    lint Makefile                                     
 
 ### Updating Azure Regions File
 
-The Azure Regions file ([`./variables_azure_locations.json`](./variables_azure_locations.json)) can be updated by executing the `list-az-locations` target while setting the `update_files` flag to `true`:
+The Azure Regions file ([`./variables_azure_locations.json`](./variables_azure_locations.json)) can be updated by executing the `list-az-locations` target while setting the `update_file` flag to `true`:
 
 ```shell
-make list-az-locations update_files=true
+make list-az-locations update_file=true
 ```
 
 ## Author Information
