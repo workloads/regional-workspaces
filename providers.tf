@@ -18,7 +18,7 @@ provider "google" {
   project     = var.google_project_id
 
   # GCP Region is required but irrelevant for the GCP Resources this repository interacts with.
-  region = var.management_region_google
+  region = var.management_region_gcp
 }
 
 # The Terraform Cloud Provider is set to retrieve configuration from the executing environment

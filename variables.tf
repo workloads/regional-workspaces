@@ -25,7 +25,7 @@ variable "management_region_aws" {
   description = "AWS-specific `Management` Region Identifier."
 }
 
-variable "management_region_google" {
+variable "management_region_gcp" {
   type        = string
   description = "Google-specific `Management` Region Identifier."
 }

@@ -103,7 +103,7 @@ _selfcheck                    lint Makefile                                     
 | google_credentials | The credentials to use for authenticating with GCP. | `string` | yes |
 | google_project_id | The Project ID to use for authenticating with GCP. | `string` | yes |
 | management_region_aws | AWS-specific `Management` Region Identifier. | `string` | yes |
-| management_region_google | Google-specific `Management` Region Identifier. | `string` | yes |
+| management_region_gcp | Google-specific `Management` Region Identifier. | `string` | yes |
 | terraform_version | Version of Terraform to use for Terraform Cloud. | `string` | yes |
 | tfe_oauth_client_id | VCS Provider OAuth Client Identifier. | `string` | yes |
 | tfe_organization | Name of the Terraform Cloud Organization. | `string` | yes |
