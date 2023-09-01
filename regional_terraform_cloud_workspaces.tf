@@ -44,8 +44,7 @@ module "regional_azure_workspaces" {
 
   # see https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace#identifier
   vcs_repo = {
-    # TODO: change to azure
-    identifier     = "${var.tfe_organization}/regional-aws-deployment"
+    identifier     = "${var.tfe_organization}/regional-azure-deployment"
     branch         = "main"
     oauth_token_id = var.tfe_oauth_client_id
   }
