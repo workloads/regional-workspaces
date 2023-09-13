@@ -1,3 +1,5 @@
+# The upstream value of `csp_configuration` in `workloads/workspaces` is a complex list of objects.
+# To allow for processing through TFC, the value is JSON-encoded, resulting in a change of the type to `string`
 variable "csp_configuration" {
   type = list(object({
     name    = string
