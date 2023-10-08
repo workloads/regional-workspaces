@@ -51,6 +51,7 @@ variable "tfe_organization" {
 locals {
   # load list of Azure Locations from get all currently enabled Azure Locations
   # see https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/extended_locations
+  # and https://developer.hashicorp.com/terraform/language/functions/jsondecode
   azure_locations = jsondecode(file("./variables_azure_locations.json"))
 
   csp_configuration_full = var.csp_configuration
@@ -58,6 +59,7 @@ locals {
   # selective CSP Configuration, only contains `enabled` providers
   # assigning `value` as the full value of each object results in duplication of `value.prefix` in the output
   # but it allows for easier consumption of the `value.prefix` because it foregoes approaches such as `keys()`
+  # see https://developer.hashicorp.com/terraform/language/functions/tomap
   csp_configuration = tomap({
     for value in local.csp_configuration_full :
     value.prefix => value
