@@ -14,10 +14,10 @@ terraform {
 
   # see https://developer.hashicorp.com/terraform/language/settings#specifying-provider-requirements
   required_providers {
-    # see https://registry.terraform.io/providers/hashicorp/aws/5.19.0/
+    # see https://registry.terraform.io/providers/hashicorp/aws/5.20.0/
     aws = {
       source  = "hashicorp/aws"
-      version = ">= 5.19.0, < 6.0.0"
+      version = ">= 5.20.0, < 6.0.0"
     }
 
     # see https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/
@@ -32,14 +32,14 @@ terraform {
       version = ">= 5.0.0, < 6.0.0"
     }
 
-    # see https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/
+    # see https://registry.terraform.io/providers/hashicorp/tfe/0.49.2/
     tfe = {
       source  = "hashicorp/tfe"
-      version = ">= 0.49.1, < 1.0.0"
+      version = ">= 0.49.2, < 1.0.0"
     }
   }
 
   # see https://developer.hashicorp.com/terraform/language/settings#specifying-a-required-terraform-version
   # and https://github.com/workloads/.github/blob/main/VERSIONING.md#terraform-core
-  required_version = ">= 1.5.0, < 2.0.0"
+  required_version = ">= 1.6.0, < 2.0.0"
 }
