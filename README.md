@@ -106,16 +106,16 @@ _selfcheck                    lint Makefile                                     
 | management_region_gcp | Google-specific `Management` Region Identifier. | `string` | yes |
 | terraform_version | Version of Terraform to use for Terraform Cloud. | `string` | yes |
 | tfe_oauth_client_id | VCS Provider OAuth Client Identifier. | `string` | yes |
-| tfe_organization | Name of the Terraform Cloud Organization. | `string` | yes |
+| tfe_organization | Name of Terraform Cloud Organization. | `string` | yes |
 
 ### Outputs
 
 | Name | Description |
 |------|-------------|
+| aws_regions | Exported Values of `data.aws_regions.main`. |
 | aws_workspace_urls | AWS-specific Regional Workspace URLs. |
-| azure_workspace_urls | Azure-specific Regional Workspace URLs. |
 | csp_configuration | Exported value of `local.csp_configuration`. |
-| google_workspace_urls | Google Cloud-specific Regional Workspace URLs. |
+| google_regions | Exported Values of `data.google_compute_regions.main`. |
 <!-- END_TF_DOCS -->
 
 ## Notes
