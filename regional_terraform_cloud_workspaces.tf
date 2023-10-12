@@ -2,14 +2,15 @@ module "regional_aws_workspaces" {
   # see https://developer.hashicorp.com/terraform/language/meta-arguments/for_each
   for_each = toset(data.aws_regions.main.names)
 
-  source  = "ksatirli/regional-workspace/tfe"
-  version = "1.0.0"
+  # source  = "ksatirli/regional-workspace/tfe"
+  source = "git::https://github.com/ksatirli/terraform-tfe-regional-workspace.git?ref=adds-workspace-to-vars"
+  #version = "1.1.0"
 
   region = {
-    category   = "env"
+    category   = "terraform"
     identifier = each.key
     prefix     = local.csp_configuration["aws"].prefix
-    variable   = "AWS_REGION"
+    variable   = "aws_region"
   }
 
   project_id        = tfe_project.regional_workspaces["aws"].id
