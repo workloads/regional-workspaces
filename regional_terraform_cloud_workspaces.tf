@@ -20,7 +20,7 @@ module "regional_aws_workspaces" {
   # see https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace#identifier
   vcs_repo = {
     identifier     = "${var.tfe_organization}/regional-aws-deployment"
-    branch         = "main"
+    branch         = "inactive" # the `inactive` branch provisions no billable resources
     oauth_token_id = var.tfe_oauth_client_id
   }
 }
