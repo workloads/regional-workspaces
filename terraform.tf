@@ -14,22 +14,22 @@ terraform {
 
   # see https://developer.hashicorp.com/terraform/language/settings#specifying-provider-requirements
   required_providers {
-    # see https://registry.terraform.io/providers/hashicorp/aws/5.25.0/
+    # see https://registry.terraform.io/providers/hashicorp/aws/5.26.0/
     aws = {
       source  = "hashicorp/aws"
-      version = ">= 5.25.0, < 6.0.0"
+      version = ">= 5.26.0, < 6.0.0"
     }
 
-    # see https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/
+    # see https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = ">= 3.80.0, < 4.0.0"
+      version = ">= 3.81.0, < 4.0.0"
     }
 
-    # see https://registry.terraform.io/providers/hashicorp/google/5.5.0/
+    # see https://registry.terraform.io/providers/hashicorp/google/5.6.0/
     google = {
       source  = "hashicorp/google"
-      version = ">= 5.5.0, < 6.0.0"
+      version = ">= 5.6.0, < 6.0.0"
     }
 
     # see https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/
