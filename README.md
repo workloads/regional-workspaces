@@ -1,6 +1,6 @@
 # Terraform Cloud Workspace `regional-workspaces`
 
-> This directory manages Regional (and provider-specific) Terraform Cloud Workspaces for [@workloads](https://github.com/workloads).
+> This repository manages regional (and provider-specific) Terraform Cloud Workspaces for [@workloads](https://github.com/workloads).
 
 ## Table of Contents
 
@@ -8,6 +8,7 @@
 * [Terraform Cloud Workspace `regional-workspaces`](#terraform-cloud-workspace-regional-workspaces)
   * [Table of Contents](#table-of-contents)
   * [Requirements](#requirements)
+    * [Development](#development)
   * [Diagrams](#diagrams)
     * [Terraform Cloud Workspace Structure](#terraform-cloud-workspace-structure)
   * [Usage](#usage)
@@ -21,8 +22,14 @@
 
 ## Requirements
 
-* Terraform Cloud [Account](https://app.terraform.io/session)
-* Terraform `1.5.0` or [newer](https://developer.hashicorp.com/terraform/downloads).
+* HashiCorp Terraform Cloud [Account](https://app.terraform.io/session)
+- HashiCorp Terraform `1.6.x` or [newer](https://developer.hashicorp.com/terraform/downloads)
+
+### Development
+
+For development and testing of this repository:
+
+- `terraform-docs` `0.17.0` or [newer](https://terraform-docs.io/user-guide/installation/)
 
 ## Diagrams
 
