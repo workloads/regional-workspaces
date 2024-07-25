@@ -34,7 +34,7 @@ variable "management_region_gcp" {
 
 variable "terraform_version" {
   type        = string
-  description = "Version of Terraform to use for Terraform Cloud."
+  description = "Version of Terraform to use for HCP Terraform."
 }
 
 variable "tfe_oauth_client_id" {
@@ -45,7 +45,7 @@ variable "tfe_oauth_client_id" {
 
 variable "tfe_organization" {
   type        = string
-  description = "Name of Terraform Cloud Organization."
+  description = "Name of HCP Terraform Organization."
 }
 
 locals {

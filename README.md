@@ -1,4 +1,4 @@
-# Terraform Cloud Workspace `regional-workspaces`
+# HCP Terraform Workspace `regional-workspaces`
 
 > This repository manages regional (and provider-specific) Terraform Cloud Workspaces for [@workloads](https://github.com/workloads).
 
@@ -111,9 +111,9 @@ _selfcheck                    lint Makefile                                     
 | google_project_id | The Project ID to use for authenticating with GCP. | `string` | yes |
 | management_region_aws | AWS-specific `Management` Region Identifier. | `string` | yes |
 | management_region_gcp | Google-specific `Management` Region Identifier. | `string` | yes |
-| terraform_version | Version of Terraform to use for Terraform Cloud. | `string` | yes |
+| terraform_version | Version of Terraform to use for HCP Terraform. | `string` | yes |
 | tfe_oauth_client_id | VCS Provider OAuth Client Identifier. | `string` | yes |
-| tfe_organization | Name of Terraform Cloud Organization. | `string` | yes |
+| tfe_organization | Name of HCP Terraform Organization. | `string` | yes |
 
 ### Outputs
 
