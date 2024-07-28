@@ -7,3 +7,9 @@ data "aws_regions" "main" {}
 
 # get all currently enabled GCP Regions
 data "google_compute_regions" "main" {}
+
+# see https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/data-sources/workspace
+data "tfe_workspace" "main" {
+  name         = "regional-workspaces"
+  organization = var.tfe_organization
+}
