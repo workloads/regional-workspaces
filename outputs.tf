@@ -18,16 +18,16 @@ output "aws_workspace_urls" {
 }
 
 output "azure_locations" {
- description = "Exported Values of JSON-encoded `./variables_azure_locations.json`."
- value       = local.azure_locations
+  description = "Exported Values of JSON-encoded `./variables_azure_locations.json`."
+  value       = local.azure_locations
 }
 
 output "azure_workspace_urls" {
- description = "Azure-specific Regional Workspace URLs."
+  description = "Azure-specific Regional Workspace URLs."
 
- value = [
-   for region, workspace in module.regional_azure_workspaces : workspace.tfe_workspace.html_url
- ]
+  value = [
+    for region, workspace in module.regional_azure_workspaces : workspace.tfe_workspace.html_url
+  ]
 }
 
 output "google_regions" {
@@ -36,11 +36,11 @@ output "google_regions" {
 }
 
 output "google_workspace_urls" {
- description = "Google Cloud-specific Regional Workspace URLs."
+  description = "Google Cloud-specific Regional Workspace URLs."
 
- value = [
-   for region, workspace in module.regional_google_workspaces : workspace.tfe_workspace.html_url
- ]
+  value = [
+    for region, workspace in module.regional_google_workspaces : workspace.tfe_workspace.html_url
+  ]
 }
 
 output "tfe_workspace_terraform_version" {

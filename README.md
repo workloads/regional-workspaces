@@ -1,16 +1,16 @@
 # HCP Terraform Workspace `regional-workspaces`
 
-> This repository manages regional (and provider-specific) Terraform Cloud Workspaces for [@workloads](https://github.com/workloads).
+> This repository manages regional (and provider-specific) HCP Terraform Workspaces for [@workloads](https://github.com/workloads).
 
 ## Table of Contents
 
 <!-- TOC -->
-* [Terraform Cloud Workspace `regional-workspaces`](#terraform-cloud-workspace-regional-workspaces)
+* [HCP Terraform Workspace `regional-workspaces`](#hcp-terraform-workspace-regional-workspaces)
   * [Table of Contents](#table-of-contents)
   * [Requirements](#requirements)
     * [Development](#development)
   * [Diagrams](#diagrams)
-    * [Terraform Cloud Workspace Structure](#terraform-cloud-workspace-structure)
+    * [HCP Terraform Workspace Structure](#hcp-terraform-workspace-structure)
   * [Usage](#usage)
     * [Inputs](#inputs)
     * [Outputs](#outputs)
@@ -22,7 +22,7 @@
 
 ## Requirements
 
-* HashiCorp Terraform Cloud [Account](https://app.terraform.io/session)
+* HCP Terraform [Account](https://app.terraform.io/session)
 - HashiCorp Terraform `1.9.x` or [newer](https://developer.hashicorp.com/terraform/downloads)
 
 ### Development
@@ -33,16 +33,16 @@ For development and testing of this repository:
 
 ## Diagrams
 
-This section contains an overview of (simplified) diagrams, describing the logical connections of the individual Terraform Cloud Workspaces.
+This section contains an overview of (simplified) diagrams, describing the logical connections of the individual HCP Terraform Workspaces.
 All diagrams are expressed in [Mermaid](https://mermaid.js.org) syntax.
 
-### Terraform Cloud Workspace Structure
+### HCP Terraform Workspace Structure
 
-This diagram describes the [Terraform Cloud Workspaces](https://developer.hashicorp.com/terraform/cloud-docs/workspaces) structure:
+This diagram describes the [HCP Terraform Workspaces](https://developer.hashicorp.com/terraform/cloud-docs/workspaces) structure:
 
 ```mermaid
 flowchart TD
-  seed_workspace["Terraform Cloud Workspace `regional-workspaces`"]
+  seed_workspace["HCP Terraform Workspace `regional-workspaces`"]
   seed_workspace --- csp_configuration["CSP Configuration Object"]
 
   %% Cloud Service Providers
@@ -78,7 +78,7 @@ flowchart TD
 
 ## Usage
 
-The `regional-workspaces` Terraform Cloud Workspace acts as a bootstrapper for CSP-specific and regional Terraform Cloud Workspaces.
+The `regional-workspaces` HCP Terraform Workspace acts as a bootstrapper for CSP-specific and regional HCP Terraform Workspaces.
 
 This repository uses a standard Terraform workflow (`init`, `plan`, `apply`).
 
@@ -89,7 +89,7 @@ Additional workflows are available through a [Makefile](./Makefile).
 Running `make` without commands will print out the following help information:
 
 ```text
-🌐 REGIONAL TERRAFORM CLOUD WORKSPACES
+🌐 REGIONAL HCP TERRAFORM WORKSPACES
 
 Target                        Description                                                  Usage
 get-az-subscription           get Azure Subscription to currently logged-in Account        `make get-az-subscription`
