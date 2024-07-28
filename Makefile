@@ -1,7 +1,7 @@
-# Makefile for Regional Terraform Cloud Workspaces Seeding
+# Makefile for Regional HCP Terraform Workspaces Seeding
 
 # configuration
-MAKEFILE_TITLE = 🌐 REGIONAL TERRAFORM CLOUD WORKSPACES
+MAKEFILE_TITLE = 🌐 REGIONAL HCP TERRAFORM WORKSPACES
 
 include ../tooling/make/configs/shared.mk
 include ../tooling/make/functions/shared.mk
