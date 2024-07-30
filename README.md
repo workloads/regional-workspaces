@@ -22,7 +22,7 @@
 
 ## Requirements
 
-* HCP Terraform [Account](https://app.terraform.io/session)
+- HCP Terraform [Account](https://app.terraform.io/session)
 - HashiCorp Terraform `1.9.x` or [newer](https://developer.hashicorp.com/terraform/downloads)
 
 ### Development
