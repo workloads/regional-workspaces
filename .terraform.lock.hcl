@@ -45,22 +45,22 @@ provider "registry.terraform.io/hashicorp/azurerm" {
 }
 
 provider "registry.terraform.io/hashicorp/google" {
-  version     = "6.0.1"
-  constraints = ">= 6.0.1, < 7.0.0"
+  version     = "7.0.1"
+  constraints = ">= 6.0.1, < 7.0.2"
   hashes = [
-    "h1:yYQNXIaAp7gNCcmPcVMLYyvEmWxaFdIXwW2BYDvf864=",
-    "zh:053bcc0e62396d10a4ef40e59dcdf7d4a1491839e0dfc945de7cef5d9106a566",
-    "zh:282624e6dd086dfe10281f6ad6def3b64279e69fbd667d1141c5f1565e42aecf",
-    "zh:633384cc00d1c6e84b6cb302a898a407c85806a818ca2c93989992b4f9e9af99",
-    "zh:7099aa1a79594c6e041659e36a48f0134a19bd8e1810dfddc21bbad6d3e36d54",
-    "zh:8259adb345c1563a64bdc58efd1cae2ff174b518ccb1f31f79c9c5825e7f762e",
-    "zh:ae2c3008fe93a3bc1318079c23b1da9b55a77ace45f18cf0fa3b2aefcf33e94a",
-    "zh:b7f17cb09b4636edf4aed68ab224885523bd33a0b50af2a2a2819d5a843d49e9",
-    "zh:bee71d0adb8b842b812e4fc76853bedec93c17a6cbf56bc502a2ecf0bcbdaf98",
-    "zh:c187e22fa33cfa90a093cd25e61a77fb88898cce3f79bef33392ddb7708724ca",
-    "zh:dd5923c79697be9429edb98156aa94e69b7258f8de42d8c910dde6814c1ef981",
+    "h1:XS8MqGSQCMCAPCwkrxPDVM+HIVUvCLO36JnItB59EBs=",
+    "zh:1409f70a7757de222023d5859b1dbcab8f3bc744a81a4d7c39aac4cf249e16ad",
+    "zh:24ca670db87d5d075852b0df8fc0d198415b02d465e853d93a18e78b4dc2b8f9",
+    "zh:52b8139dc3acda118576c2cccd228fd8b85e20e1240b5002c0a8ee96a3ea6e9a",
+    "zh:59ea80da070ed2bd41361f86deb69c3ffd858f4fa797fff417594a74a01df661",
+    "zh:72e83d46ff2554282b2cec0532854d96eefb30feb36bcb09a64a30a16b1a0af0",
+    "zh:77e4f570fd4c82246ffff74a017037894442261ceb0c10d508fe2fd0dfcb44e3",
+    "zh:7d89312d3d6d07df563c297e0acc077c2eaf40c855d89dcd03872784a71cd627",
+    "zh:9bfc2947a9a77350ca0a4f221e7957f409effb7ff2375f7937622982c5abde92",
+    "zh:a026350f3e4f2edcae02faf8f49420e257ac6bd979fa9442e146f3fdc4a9becd",
+    "zh:a6c160c90f5ef3894ea904000ddf24a752b55bf8eabe5c0ba0d9db70e44a63d3",
+    "zh:c61eeb9d379e3759236073f91d908cd01f810556278a9db8d8b1864d474f2f78",
     "zh:f569b65999264a9416862bca5cd2a6177d94ccb0424f3a4ef424428912b9cb3c",
-    "zh:fe789dc52fc029c18e92db0efb3b013d15679b81c1ab633fa69b3eacde9842ac",
   ]
 }
 
