@@ -27,7 +27,7 @@ terraform {
     # see https://registry.terraform.io/providers/hashicorp/google/6.0.1
     google = {
       source  = "hashicorp/google"
-      version = ">= 6.0.1, < 7.0.0"
+      version = ">= 6.0.1, < 7.8.1"
     }
 
     # see https://registry.terraform.io/providers/hashicorp/tfe/0.58.1
